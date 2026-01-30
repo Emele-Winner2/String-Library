@@ -1,22 +1,6 @@
 #include "my-string.h"
 #include "stdint.h"
-<<<<<<< HEAD
-size_t my_strlen(const char str[]){
-    char check = '0';
-    int count;
-    for (size_t i = 0;check!='\0'; i++)
-    {
-        check = str[i];
-        if (check!='\0')
-        {
-            count++;
-        }
-        
-    }
-    return count;
-=======
-
-
+#include "stdbool.h"
 size_t my_strlen(const char *str) {
   size_t count = 0;
 
@@ -24,5 +8,16 @@ size_t my_strlen(const char *str) {
     count++;
   } 
   return count;
->>>>>>> 3d4e19a683ac89a3c8ad2c8ca3d7996ae16bfaa9
+
 };
+bool my_strcpy(const char *src, char *dest){
+  if (my_strlen(dest)<my_strlen(src))
+  {
+    return -1;//second string cannot contain src string
+  }
+  for (size_t i = 0; i < my_strlen(src); i++)
+{
+  dest[i] = src[i];
+}
+  return true;
+}

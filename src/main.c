@@ -1,4 +1,4 @@
-#include "my-string.h"
+#include "../include/my-string.h"
 #include "stdio.h"
 
 int main() {
