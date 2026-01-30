@@ -10,7 +10,7 @@ size_t my_strlen(const char *str) {
   return count;
 
 };
-bool my_strcpy(const char *src, char *dest){
+int my_strcpy(const char *src, char *dest){
   if (my_strlen(dest)<my_strlen(src))
   {
     return -1;//second string cannot contain src string
