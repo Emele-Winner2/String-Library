@@ -15,9 +15,17 @@ int my_strcpy(const char *src, char *dest){
   {
     return -1;//second string cannot contain src string
   }
+  //set each element of dest string to null.
+for (size_t i = 0; i < my_strlen(dest); i++)
+{
+  dest[i] = ' ';
+}
+//copy the elements from src to dest string.
   for (size_t i = 0; i < my_strlen(src); i++)
 {
   dest[i] = src[i];
+ 
+  
 }
   return true;
 }

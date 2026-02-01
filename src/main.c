@@ -2,8 +2,11 @@
 #include "stdio.h"
 
 int main() {
-  char a[] = "helloworld";
+  char a[] = "helloworldnigga";
+  char b[] = "theworldaaaaaaaaaaaaa";
   int dam = my_strlen(a);
+  my_strcpy(a,b);
+  printf("%s", b);
   printf("%d", dam);
   return 0;
 }
