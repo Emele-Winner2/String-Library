@@ -10,22 +10,21 @@ size_t my_strlen(const char *str) {
   return count;
 
 };
-int my_strcpy(const char *src, char *dest){
-  if (my_strlen(dest)<my_strlen(src))
-  {
-    return -1;//second string cannot contain src string
-  }
-  //set each element of dest string to null.
-for (size_t i = 0; i < my_strlen(dest); i++)
-{
-  dest[i] = ' ';
-}
-//copy the elements from src to dest string.
-  for (size_t i = 0; i < my_strlen(src); i++)
-{
-  dest[i] = src[i];
- 
-  
-}
-  return true;
+ int my_memcpy(const char* src, char* dest) {
+	if (my_strlen(dest) < my_strlen(src))
+	{
+		printf("Error: compare the length of the strings before you copy.\n");
+		return -1;//second string cannot contain src string
+	}
+	//copy the elements from src to dest string.
+	for (size_t i = 0; i < my_strlen(dest); i++)
+	{
+		dest[i] = src[i];//added the null terminator.
+		if (i>my_strlen(src))
+		{
+			dest[i] = '\0';
+		}
+
+	}
+	return true;
 }

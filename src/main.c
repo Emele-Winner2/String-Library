@@ -5,7 +5,7 @@ int main() {
   char a[] = "helloworldnigga";
   char b[] = "theworldaaaaaaaaaaaaa";
   int dam = my_strlen(a);
-  my_strcpy(a,b);
+  my_memcpy(a,b);
   printf("%s", b);
   printf("%d", dam);
   return 0;
