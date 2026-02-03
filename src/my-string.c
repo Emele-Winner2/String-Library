@@ -10,7 +10,7 @@ size_t my_strlen(const char *str) {
   return count;
 
 };
- int my_memcpy(const char* src, char* dest) {
+ int my_strcpy(const char* src, char* dest) {
 	if (my_strlen(dest) < my_strlen(src))
 	{
 		printf("Error: compare the length of the strings before you copy.\n");
